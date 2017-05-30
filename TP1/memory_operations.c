@@ -2,9 +2,17 @@
 #include <stdlib.h>
 
 void *my_memcpy(void *dst, const void *src, size_t len)
-{
-  void *resultat = NULL;
-  return resultat;
+{	
+	char* destination = dst;
+	const char* source = src;
+
+	while(len>0){
+		*(destination) = *(source);
+		destination++;
+		source++;
+		len--;
+	}
+	return dst;
 }
 
 void *my_memmove(void *dst, const void *src, size_t len)
