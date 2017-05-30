@@ -17,8 +17,16 @@ void *my_memcpy(void *dst, const void *src, size_t len)
 
 void *my_memmove(void *dst, const void *src, size_t len)
 {
-  void *resultat = NULL;
-  return resultat;
+  int i = 0;
+  const char* source = src;
+  char tableau[len];
+  while(i < len){
+  	tableau[i] = *source;
+  	i++;
+  	source++;
+  }
+  my_memcpy(dst, tableau, len);
+  return dst;
 }
 
 int is_little_endian()
