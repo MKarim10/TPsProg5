@@ -32,7 +32,7 @@ double *acces_matrice(matrice m, int i, int j)
 {
   double *resultat = NULL;
   if (i<m.l && j<m.c)
-    resultat = &(m.donnees[i*m.c] + j*sizeof(double));
+    resultat = m.donnees +  i*m.c + j;
   return resultat;
 }
 
