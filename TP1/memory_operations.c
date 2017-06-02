@@ -44,6 +44,14 @@ int is_little_endian()
 
 int reverse_endianess(int value)
 {
-  int resultat = 0;
+  int resultat, i;
+  char *src, *dest;
+  src = (char *) &value;
+  dest = ((char*) &resultat)+ sizeof(int);
+  for (i=0; i<sizeof(int); i++){
+    *(dest) = *(src);
+    dest --;
+    src ++;
+  }
   return resultat;
 }
