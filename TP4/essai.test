@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int i; 
+	srandom(989879);
+
+	for(i=0; i<10000; i++)
+		printf("i %ld %ld\n", random(), random());
+	
+	for(i=0; i<5000; i++)
+		printf("e\n");
+
+	printf("q");
+	
+return 0;
+}
